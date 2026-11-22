@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+.pytest_cache/
+vendor/
+environment_files/
+recordings/
+results/*.json
+.kaggle/
+.env
+*.parquet

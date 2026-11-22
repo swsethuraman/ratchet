@@ -1,0 +1,27 @@
+name: outer-loop
+# DISABLED BY DEFAULT: manual dispatch only until the gate is proven on 3 clean
+# generations. Then uncomment the schedule. Runs on the self-hosted runner.
+on:
+  workflow_dispatch:
+    inputs:
+      generation_note:
+        description: "What this generation targets"
+        required: false
+#  schedule:
+#    - cron: "0 */4 * * *"   # every 4 hours, UTC
+concurrency:
+  group: outer-loop
+  cancel-in-progress: false
+jobs:
+  generation:
+    runs-on: self-hosted
+    timeout-minutes: 210
+    steps:
+      - uses: actions/checkout@v4
+      - name: Budget and dead-man check
+        run: python orchestrator/budget_check.py
+      - name: Run one generation (mine -> propose -> gate -> PRs)
+        env:
+          PROPOSER_API_KEY: ${{ secrets.PROPOSER_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python orchestrator/generation.py

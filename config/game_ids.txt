@@ -1,0 +1,5 @@
+# One 4-character public game id per line, from `make list-games`.
+# Seeded with ids seen in the docs; replace with the full list.
+ls20
+ft09
+vc33

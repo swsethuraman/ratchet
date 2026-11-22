@@ -1,0 +1,12 @@
+{
+  "_note": "Swami sets these numbers. All spend is metered centrally by the orchestrator; resets at 00:00 UTC.",
+  "currency": "USD",
+  "daily_cap_total": null,
+  "per_provider_daily_cap": {
+    "frontier_api_proposer": null,
+    "gpu_eval_instance": null
+  },
+  "sprint_cap_total": null,
+  "on_cap": "stop_all_and_notify",
+  "dead_mans_switch_hours": 12
+}

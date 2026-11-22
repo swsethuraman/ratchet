@@ -1,0 +1,16 @@
+{
+  "_doc": "One object appended per evaluation generation; feeds the live progress page.",
+  "timestamp_utc": "2026-10-17T18:00:00Z",
+  "commit": "abc1234",
+  "heldout_rhae_mean": 0.0,
+  "heldout_rhae_std": 0.0,
+  "public_dev_rhae_mean": 0.0,
+  "levels_completed": 0,
+  "levels_total": 0,
+  "mean_actions_ratio_vs_human": null,
+  "experiments_run": 0,
+  "experiments_accepted": 0,
+  "spend_usd_today": 0.0,
+  "kaggle_public_lb": null,
+  "notes": ""
+}
